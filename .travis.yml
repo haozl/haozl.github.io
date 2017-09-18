@@ -17,6 +17,10 @@ branches:
   only:
   - src
 
+cache:
+  directories:
+    - node_modules
+
 before_install:
 - npm install -g hexo
 
