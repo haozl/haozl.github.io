@@ -41,13 +41,11 @@ script:
 after_success:
 - mkdir .deploy
 - cd .deploy
-- git clone --depth 1 --branch master --single-branch $DEPLOY_CODING . || (git init && git remote add -t master origin $DEPLOY_CODING)
+- git clone --depth 1 --branch master --single-branch $DEPLOY_CODING . || (git init && git remote add -t master origin $DEPLOY_CODING && git remote add -t master github $DEPLOY_GITHUB)
 - rm -rf ./*
 - cp -r ../public/* .
 - git add -A .
 - git commit -m 'Site updated'
 - git branch -m master
 - git push -q -f -u origin master
-
-- git remote add github $DEPLOY_GITHUB
-- git push -f master github:master
+- git push -f -u master github:master
