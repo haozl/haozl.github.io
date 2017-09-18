@@ -24,10 +24,10 @@ cache:
   directories:
     - node_modules
 
-before_install:
-- npm install -g hexo
+# before_install:
 
 install:
+- npm install hexo
 - npm install
 
 before_script:
@@ -36,7 +36,7 @@ before_script:
 # - git clone git://github.com/heroicyang/hexo-theme-modernist.git themes/modernist
 
 script:
-- hexo generate
+- node_modules/bin/hexo generate
 
 after_success:
 - mkdir .deploy
