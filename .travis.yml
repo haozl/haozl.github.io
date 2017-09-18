@@ -47,5 +47,6 @@ after_success:
 - git add -A .
 - git commit -m 'Site updated'
 - git branch -m master
+- git branch -a
 - git push -q -f -u origin master
 - git push -f -u master github:master
