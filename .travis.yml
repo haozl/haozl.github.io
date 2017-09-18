@@ -50,4 +50,4 @@ after_success:
 - git push -q -f -u origin master
 
 - git remote add github $DEPLOY_GITHUB
-- git push -f github master
+- git push -f master github:master
