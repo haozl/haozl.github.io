@@ -47,7 +47,7 @@ after_success:
 - git add -A .
 - git commit -m 'Site updated'
 - git branch -m master
-- git push -q -u origin master
+- git push -q -f -u origin master
 
 - git remote add github $DEPLOY_GITHUB
 - git push -q -f github master
